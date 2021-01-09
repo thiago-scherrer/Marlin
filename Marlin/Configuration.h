@@ -21,7 +21,7 @@
  */
 #pragma once
 
-#define STRING_CONFIG_H_AUTHOR "(Thiago L. Scherrer, default config)" // Who made the changes.
+#define CONFIG_EXAMPLES_DIR "Creality/Ender-3/BigTreeTech SKR Mini E3 1.2"
 
 /**
  * Configuration.h

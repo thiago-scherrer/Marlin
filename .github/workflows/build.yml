@@ -29,3 +29,9 @@ jobs:
     - name: Run buil
       run: |
         pio run
+
+    - name: Upload artifact ...
+      uses: actions/upload-artifact@v2
+      with:
+        name: firmware1.2
+        path: .pio/build/STM32F103RC_btt_512K/firmware.bin

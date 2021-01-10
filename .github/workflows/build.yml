@@ -1,14 +1,8 @@
-name: CI
+name: ci
 
 on:
   push:
-    branches:
-    - bugfix-2.0.x
-    paths-ignore:
-    - config/**
-    - data/**
-    - docs/**
-    - '**/*.md'
+    branches: 2.0.x
 
 jobs:
   build:

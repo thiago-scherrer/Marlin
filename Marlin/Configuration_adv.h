@@ -1608,8 +1608,8 @@
  *
  * Warning: Does not respect endstops!
  */
-#define BABYSTEPPING
-//#if ENABLED(BABYSTEPPING)
+//#define BABYSTEPPING
+#if ENABLED(BABYSTEPPING)
   //#define INTEGRATED_BABYSTEPPING         // EXPERIMENTAL integration of babystepping into the Stepper ISR
   //#define BABYSTEP_WITHOUT_HOMING
   //#define BABYSTEP_ALWAYS_AVAILABLE       // Allow babystepping at all times (not just during movement).

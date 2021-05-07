@@ -19,26 +19,8 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
+#pragma once
 
-#include "../../inc/MarlinConfig.h"
+#define BOARD_INFO_NAME "BTT SKR V2 Rev.B"
 
-#if ENABLED(AIR_EVACUATION)
-
-#include "../gcode.h"
-#include "../../feature/spindle_laser.h"
-
-/**
- * M10: Vacuum or Blower On
- */
-void GcodeSuite::M10() {
-  cutter.air_evac_enable();   // Turn on Vacuum or Blower motor
-}
-
-/**
- * M11: Vacuum or Blower OFF
- */
-void GcodeSuite::M11() {
-  cutter.air_evac_disable();  // Turn off Vacuum or Blower motor
-}
-
-#endif // AIR_EVACUATION
+#include "pins_BTT_SKR_V2_0_common.h"

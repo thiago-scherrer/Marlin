@@ -372,9 +372,11 @@ class Temperature {
     static inline bool hotEnoughToExtrude(const uint8_t e) { return !tooColdToExtrude(e); }
     static inline bool targetHotEnoughToExtrude(const uint8_t e) { return !targetTooColdToExtrude(e); }
 
-    #if ENABLED(SINGLENOZZLE_STANDBY_FAN)
-      static celsius_t singlenozzle_temp[EXTRUDERS];
-      #if HAS_FAN
+    #if EITHER(SINGLENOZZLE_STANDBY_TEMP, SINGLENOZZLE_STANDBY_FAN)
+      #if ENABLED(SINGLENOZZLE_STANDBY_TEMP)
+        static celsius_t singlenozzle_temp[EXTRUDERS];
+      #endif
+      #if ENABLED(SINGLENOZZLE_STANDBY_FAN)
         static uint8_t singlenozzle_fan_speed[EXTRUDERS];
       #endif
       static void singlenozzle_change(const uint8_t old_tool, const uint8_t new_tool);
@@ -416,10 +418,6 @@ class Temperature {
     #endif
 
   private:
-
-    #if ENABLED(EARLY_WATCHDOG)
-      static bool inited;   // If temperature controller is running
-    #endif
 
     static volatile bool raw_temps_ready;
 

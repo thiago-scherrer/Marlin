@@ -84,7 +84,7 @@ typedef struct {
     uint8_t fan_speed[FAN_COUNT];
   #endif
 
-  #if ENABLED(HAS_LEVELING)
+  #if HAS_LEVELING
     float fade;
   #endif
 
@@ -116,7 +116,7 @@ typedef struct {
     bool raised:1;                // Raised before saved
     bool dryrun:1;                // M111 S8
     bool allow_cold_extrusion:1;  // M302 P1
-    #if ENABLED(HAS_LEVELING)
+    #if HAS_LEVELING
       bool leveling:1;            // M420 S
     #endif
     #if DISABLED(NO_VOLUMETRICS)

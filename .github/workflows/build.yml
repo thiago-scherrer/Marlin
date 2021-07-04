@@ -1,4 +1,4 @@
-name: Make firmware
+name: SKR Mini e3 v1.2 bltouch
 
 on:
   push:

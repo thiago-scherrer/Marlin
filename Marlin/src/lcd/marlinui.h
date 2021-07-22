@@ -200,13 +200,11 @@ public:
 
   #if HAS_MULTI_LANGUAGE
     static uint8_t language;
-    static inline void set_language(const uint8_t lang) {
-      if (lang < NUM_LANGUAGES) {
-        language = lang;
-        return_to_status();
-        refresh();
-      }
-    }
+    static void set_language(const uint8_t lang);
+  #endif
+
+  #if HAS_MARLINUI_U8GLIB
+    static void update_language_font();
   #endif
 
   #if ENABLED(SOUND_MENU_ITEM)
@@ -525,10 +523,13 @@ public:
 
     static void draw_select_screen_prompt(PGM_P const pref, const char * const string=nullptr, PGM_P const suff=nullptr);
 
-  #elif HAS_WIRED_LCD
+  #else
 
     static constexpr bool on_status_screen() { return true; }
-    FORCE_INLINE static void run_current_screen() { status_screen(); }
+
+    #if HAS_WIRED_LCD
+      FORCE_INLINE static void run_current_screen() { status_screen(); }
+    #endif
 
   #endif
 

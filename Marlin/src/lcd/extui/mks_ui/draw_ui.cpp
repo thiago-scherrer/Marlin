@@ -51,10 +51,18 @@
   #include "draw_touch_calibration.h"
 #endif
 
+<<<<<<< HEAD
 #if ENABLED(MKS_TEST)
   #include "mks_hardware_test.h"
 #endif
 
+||||||| 69b44c2309
+=======
+#if ENABLED(MKS_TEST)
+  #include "mks_hardware.h"
+#endif
+
+>>>>>>> 7773504afa546884f533fabefa1497547431bcdf
 CFG_ITMES gCfgItems;
 UI_CFG uiCfg;
 DISP_STATE_STACK disp_state_stack;
@@ -1365,10 +1373,19 @@ void print_time_count() {
 
 void LV_TASK_HANDLER() {
   lv_task_handler();
+<<<<<<< HEAD
 
   #if ENABLED(MKS_TEST)
     if (mks_test_flag == 0x1E) mks_hardware_test();
   #endif
+||||||| 69b44c2309
+  if (mks_test_flag == 0x1E) mks_hardware_test();
+=======
+
+  #if BOTH(MKS_TEST, SDSUPPORT)
+    if (mks_test_flag == 0x1E) mks_hardware_test();
+  #endif
+>>>>>>> 7773504afa546884f533fabefa1497547431bcdf
 
   TERN_(HAS_GCODE_PREVIEW, disp_pre_gcode(2, 36));
 

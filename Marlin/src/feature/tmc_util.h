@@ -360,6 +360,7 @@ void test_tmc_connection(LOGICAL_AXIS_DECL(const bool, true));
   #if ENABLED(IMPROVE_HOMING_RELIABILITY)
     extern millis_t sg_guard_period;
     constexpr uint16_t default_sg_guard_duration = 400;
+<<<<<<< HEAD
 
     struct motion_state_t {
       xy_ulong_t acceleration;
@@ -367,6 +368,16 @@ void test_tmc_connection(LOGICAL_AXIS_DECL(const bool, true));
         xy_float_t jerk_state;
       #endif
     };
+||||||| 69b44c2309
+
+    struct motion_state_t {
+      xy_ulong_t acceleration;
+      #if ENABLED(HAS_CLASSIC_JERK)
+        xy_float_t jerk_state;
+      #endif
+    };
+=======
+>>>>>>> 7773504afa546884f533fabefa1497547431bcdf
   #endif
 
   bool tmc_enable_stallguard(TMC2130Stepper &st);

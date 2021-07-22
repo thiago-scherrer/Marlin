@@ -20,14 +20,14 @@
  *
  */
 #pragma once
-
+#
 #define CONFIGURATION_H_VERSION 02000901
 
 #define STRING_CONFIG_H_AUTHOR "(none, default config)" // Who made the changes.
 
 #define SHOW_BOOTSCREEN
 
-#define SHOW_CUSTOM_BOOTSCREEN
+define SHOW_CUSTOM_BOOTSCREEN
 
 #define CUSTOM_STATUS_SCREEN_IMAGE
 

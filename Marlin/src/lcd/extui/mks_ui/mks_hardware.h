@@ -21,15 +21,38 @@
  */
 #pragma once
 
+#include "../../../inc/MarlinConfigPre.h"
+
 #include <lvgl.h>
 
+<<<<<<< HEAD:Marlin/src/lcd/extui/mks_ui/mks_hardware_test.h
 void mks_gpio_test();
 void mks_hardware_test();
 void mks_test_get();
 
 void disp_char_1624(uint16_t x, uint16_t y, uint8_t c, uint16_t charColor, uint16_t bkColor);
+||||||| 69b44c2309:Marlin/src/lcd/extui/mks_ui/mks_hardware_test.h
+void mks_gpio_test();
+void disp_char_1624(uint16_t x, uint16_t y, uint8_t c, uint16_t charColor, uint16_t bkColor);
+=======
+// Functions for MKS_TEST
+#if BOTH(MKS_TEST, SDSUPPORT)
+  void mks_hardware_test();
+  void mks_test_get();
+  void mks_gpio_test();
+  extern uint8_t mks_test_flag;
+#endif
+
+// String display and assets
+>>>>>>> 7773504afa546884f533fabefa1497547431bcdf:Marlin/src/lcd/extui/mks_ui/mks_hardware.h
 void disp_string(uint16_t x, uint16_t y, const char * string, uint16_t charColor, uint16_t bkColor);
 void disp_assets_update();
 void disp_assets_update_progress(const char *msg);
+<<<<<<< HEAD:Marlin/src/lcd/extui/mks_ui/mks_hardware_test.h
 
 extern uint8_t mks_test_flag;
+||||||| 69b44c2309:Marlin/src/lcd/extui/mks_ui/mks_hardware_test.h
+void mks_test_get();
+extern uint8_t mks_test_flag;
+=======
+>>>>>>> 7773504afa546884f533fabefa1497547431bcdf:Marlin/src/lcd/extui/mks_ui/mks_hardware.h

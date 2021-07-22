@@ -27,14 +27,20 @@
 #include "draw_ui.h"
 #include "pic_manager.h"
 #include "draw_ready_print.h"
+<<<<<<< HEAD
 
 #if ENABLED(MKS_TEST)
   #include "mks_hardware_test.h"
 #endif
 
+||||||| 69b44c2309
+#include "mks_hardware_test.h"
+
+=======
+#include "mks_hardware.h"
+>>>>>>> 7773504afa546884f533fabefa1497547431bcdf
 #include "SPIFlashStorage.h"
 #include "../../../libs/W25Qxx.h"
-
 #include "../../../sd/cardreader.h"
 #include "../../../MarlinCore.h"
 

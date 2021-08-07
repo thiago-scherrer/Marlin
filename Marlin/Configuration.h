@@ -23,7 +23,7 @@
 
 #define CONFIGURATION_H_VERSION 02000901
 
-#define STRING_CONFIG_H_AUTHOR "(none, default config)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(thiago-scherrer, Ender-3)" // Who made the changes.
 
 #define SHOW_BOOTSCREEN
 

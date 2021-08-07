@@ -1,4 +1,4 @@
-name: SKR Mini e3 v1.2 bltouch
+name: SKR Mini e3 v2.0 bltouch
 
 on:
   push:
@@ -19,5 +19,5 @@ jobs:
       name: Upload firmware
       uses: actions/upload-artifact@v2
       with:
-        name: firmware1.2
+        name: firmware2.0
         path: .pio/build/STM32F103RC_btt/firmware.bin

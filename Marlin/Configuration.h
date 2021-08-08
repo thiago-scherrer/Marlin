@@ -349,8 +349,6 @@
                                       // for small segments (< 1mm) with large junction angles (> 135°).
 #endif
 
-#define S_CURVE_ACCELERATION
-
 #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 #define BLTOUCH

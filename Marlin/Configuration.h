@@ -713,8 +713,6 @@
 
 #define SOFT_PWM_SCALE 0
 
-#define TEMP_STAT_LEDS
-
 #if EITHER(RGB_LED, RGBW_LED)
 #endif
 

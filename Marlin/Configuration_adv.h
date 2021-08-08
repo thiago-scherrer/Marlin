@@ -454,9 +454,6 @@
  *   PWM on pin OC2A. Only use this option if you don't need PWM on 0C2A. (Check your schematic.)
  *   USE_OCR2A_AS_TOP sacrifices duty cycle control resolution to achieve this broader range of frequencies.
  */
-#define FAN_SOFT_PWM
-#if ENABLED(FAST_PWM_FAN)FAST_PWM_FAN
-#endif
 
 /**
  * Use one of the PWM fans as a redundant part-cooling fan

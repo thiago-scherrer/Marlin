@@ -275,7 +275,6 @@
 
 #endif
 
-
 #define X_MIN_ENDSTOP_INVERTING false
 #define Y_MIN_ENDSTOP_INVERTING false
 #define Z_MIN_ENDSTOP_INVERTING false
@@ -710,9 +709,11 @@
   #endif
 #endif
 
-
+#define FAN_SOFT_PWM
 
 #define SOFT_PWM_SCALE 0
+
+#define TEMP_STAT_LEDS
 
 #if EITHER(RGB_LED, RGBW_LED)
 #endif

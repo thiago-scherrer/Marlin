@@ -454,7 +454,8 @@
  *   PWM on pin OC2A. Only use this option if you don't need PWM on 0C2A. (Check your schematic.)
  *   USE_OCR2A_AS_TOP sacrifices duty cycle control resolution to achieve this broader range of frequencies.
  */
-#if ENABLED(FAST_PWM_FAN)
+#define FAN_SOFT_PWM
+#if ENABLED(FAST_PWM_FAN)FAST_PWM_FAN
 #endif
 
 /**
@@ -472,7 +473,7 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN 50
+#define E0_AUTO_FAN_PIN -1
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
@@ -3105,3 +3106,5 @@
 /**
  * Software Reset options
  */
+
+

@@ -3105,5 +3105,3 @@
 /**
  * Software Reset options
  */
-
-#define FAN_SOFT_PWM

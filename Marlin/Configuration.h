@@ -47,6 +47,8 @@
 
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
 
+#define SPEAKER
+
 #if LINEAR_AXES >= 4
   #define AXIS4_NAME 'A'
 #endif

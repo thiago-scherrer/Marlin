@@ -406,7 +406,7 @@
  * The fan turns on automatically whenever any driver is enabled and turns
  * off (or reduces to idle speed) shortly after drivers are turned off.
  */
-
+#define USE_CONTROLLER_FAN
 #if ENABLED(USE_CONTROLLER_FAN)
 
   #define CONTROLLERFAN_SPEED_MIN      0
@@ -475,7 +475,8 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN PC8
+
+#define E0_AUTO_FAN_PIN -1
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1

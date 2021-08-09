@@ -711,7 +711,7 @@
   #endif
 #endif
 
-#define FAN_SOFT_PWM
+//#define FAN_SOFT_PWM
 
 #define SOFT_PWM_SCALE 0
 

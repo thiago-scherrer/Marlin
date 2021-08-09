@@ -338,7 +338,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    5.0
+#define DEFAULT_EJERK    10
 
 #if DISABLED(CLASSIC_JERK)
   #define JUNCTION_DEVIATION_MM 0.08

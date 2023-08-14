@@ -19,4 +19,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: firmware1.2
-        path: .pio/build/STM32F103RC_btt_USB_maple/firmware.bin
+        path: .pio/build/STM32F103RC_btt/firmware.bin
